@@ -21,8 +21,8 @@ train_generator = datagen.flow_from_directory('Chosen dataset\Processed folders'
 features = model.predict(train_generator, verbose=1)
 
 # Save the features and labels to numpy arrays
-np.save('./features.xlsx', features)
-np.save('./labels.xlsx', train_generator.classes)
+np.save('./features.npy', features)
+np.save('./labels.npy', train_generator.classes)
 
 
 
